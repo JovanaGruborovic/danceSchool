@@ -29,8 +29,8 @@
 				$sql2=mysqli_query($connection,"SELECT `id` FROM `user` WHERE email='$email'");
 				$row=mysqli_fetch_assoc($sql2);
                	$userId= $row['id'];
-               	$upit2=mysqli_query($connection,"INSERT INTO `checkin`(`id_user`, `id_course`) VALUES ($userId,$course)");
-			   if($sql2)
+               	$sql3=mysqli_query($connection,"INSERT INTO `checkin`(`id_user`, `id_course`) VALUES ($userId,$course)");
+			   if($sql3)
 			   {
                		echo "<script> alert('Uspešno ste se prijavili.');
 					   window.location.assign('prijava.php')</script>";
